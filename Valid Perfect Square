@@ -1,0 +1,31 @@
+class Solution {
+    public boolean isPerfectSquare(int num) {
+        long i = 0;
+        boolean result = true;
+        
+        if (num == 0 || num == 1)
+        {
+            result = true;
+        }
+        
+        if (num != 0 && num != 1)
+        {
+             while (i <= num/2 && i * i <= num)
+            {
+                if (i * i == num)
+                {
+                    result = true;
+                }
+            
+                else
+                {
+                    result = false;
+                    
+                }
+                i++;
+            }
+        }
+       
+        return result;
+    }
+}
