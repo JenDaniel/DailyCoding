@@ -1,1 +1,46 @@
+class Solution {
+    public int distributeCandies(int[] candyType) {
+      
+        int x = 1;
+        int count = 0;
+        int result = 0;
+       
+        Arrays.sort(candyType);
+        int first = candyType[0];
+        int lastNum = candyType[candyType.length - 1];
+        
+        for (int i = 1; i < candyType.length; i++)
+        {
+             if (candyType[i] != candyType[i - 1])
+             {
+                 x++;
+                 //i++;
+             }
+            
+            
+        }
+        
+        
+        if (first == lastNum)
+        {
+            result = 1;
+        }
+        
+        else if (candyType.length / 2 < x)
+        {
+            result = candyType.length / 2;
+            
+        }
 
+        else
+        {
+            result = x;
+        }
+        
+        //return result;
+        return result;
+        //return count;
+    }
+}
+           
+   
