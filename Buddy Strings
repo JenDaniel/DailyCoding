@@ -1,0 +1,39 @@
+class Solution {
+    public boolean buddyStrings(String A, String B) {
+        int diffCounter = 0;
+        boolean result = false;
+        
+        if (A.length() != B.length())
+        {
+            result = false;
+        }
+        
+        if (A.equals(B))
+        {
+            result = true;
+        }
+        
+        if (A.length() == B.length())
+        {
+            for (int i = 0; i < A.length(); i++)
+            {
+                if (A.charAt(i) != B.charAt(i))
+                {
+                    diffCounter++;
+                }
+                
+            }
+        }
+        
+        if (diffCounter == 0 || diffCounter == 2)
+        {
+            result = true;
+        }
+        else
+        {
+            result = false;
+        }
+        
+        return result;
+    }
+}
