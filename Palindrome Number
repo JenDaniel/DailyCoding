@@ -1,0 +1,24 @@
+class Solution {
+    public boolean isPalindrome(int x) {
+        boolean result = false;
+        int reverse = 0;
+        int div = x;
+        
+        while (div != 0)
+        {
+            reverse = reverse * 10 + div % 10;
+            div = div / 10;
+        }
+        
+        if (x == reverse && x > 0 || x == 0)
+        {
+            result = true;
+        }
+        else
+        {
+            result = false;
+        }
+        
+        return result;
+    }
+}
